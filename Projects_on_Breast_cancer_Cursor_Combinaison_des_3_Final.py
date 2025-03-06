@@ -187,7 +187,7 @@ else:
 # =====================================================
 @st.cache_data(show_spinner=False)
 def load_data():
-    df = pd.read_csv("c:/Users/davef/OneDrive/Desktop/Data Projects/breast-cancer-wisconsin-data.csv")
+    df = pd.read_csv("breast-cancer-wisconsin-data.csv")
     df = df.drop(columns=['id'])
     df['diagnosis'] = df['diagnosis'].map({'M': 1, 'B': 0})
     return df
